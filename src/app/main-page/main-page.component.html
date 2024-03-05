@@ -1,0 +1,50 @@
+<div class="card">
+    <img class="image" src="../assets/images/illustration-sign-up-mobile.svg" alt="sign-up">
+    <img class="image-desktop" src="../assets/images/illustration-sign-up-desktop.svg" alt="sign-up">
+    <div class="text-container">
+      <h1>
+        Stay updated!
+      </h1>
+     
+      <p>
+        Join 60,000+ product managers receiving monthly updates on:
+      </p>
+      <ul>
+        <li>
+          <img src="../assets/images/icon-list.svg" alt="icon-list">
+          Product discovery and building what matters
+        </li>
+        <li>
+          <img src="../assets/images/icon-list.svg" alt="icon-list">
+          Measuring to ensure updates are a success
+        </li>
+        <li>
+          <img src="../assets/images/icon-list.svg" alt="icon-list">
+          And much more!
+        </li>
+      </ul>
+      <form class="form-block" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <!-- Sign-up form start -->
+        <label for="email">
+          Email address
+          <span *ngIf="!email.valid && email.touched || temp == false" #input>Valid email required</span>
+        </label>
+        <input 
+            id="email"
+            name="email"
+            type="text" 
+            placeholder="email@company.com"
+            ngModel
+            email
+            required
+            #email="ngModel"
+        >
+        
+        <button 
+            type="submit"
+          >
+          Subscribe to monthly newsletter
+        </button>
+      </form>
+    </div>
+  </div>
